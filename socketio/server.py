@@ -530,6 +530,7 @@ class Server(object):
     def _send_packet(self, sid, pkt):
         """Send a Socket.IO packet to a client."""
         encoded_packet = pkt.encode()
+        print('_send_packet')
         if isinstance(encoded_packet, list):
             binary = False
             for ep in encoded_packet:
